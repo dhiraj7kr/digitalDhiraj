@@ -5,18 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dhiraj Kumar | Java Full Stack</title>
     <link rel="icon" href="https://raw.githubusercontent.com/dhiraj7kr/digitalDhiraj/refs/heads/main/Project/Flower.png" type="image/png">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="experience.css">
+    <link rel="stylesheet" href="projectcss.css">
+    <link rel="stylesheet" href="aboutcss.css">
+    <link rel="stylesheet" href="contactcss.css">
+    
+    <style>
+        html { scroll-behavior: smooth; }
+        /* Add some padding for the fixed header when scrolling to ID */
+        section { scroll-margin-top: 60px; }
+    </style>
 </head>
 <body>
     <nav>
         <div class="nav-container">
-            <a href="index.html" class="logo">Dhiraj Kumar</a>
+            <a href="#home" class="logo">Dhiraj Kumar</a>
             <div class="nav-links">
-                <a href="about.html">About</a>
-                <a href="project.html">Projects</a>
-                <a href="experience.html">Experience</a>
-                <a href="contact.html">Contact</a>
+                <a href="#home">Home</a>
+                <a href="#experience">Experience</a>
+                <a href="#projects">Projects</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
             </div>
             <div class="hamburger" id="hamburger-btn">
                 <div class="line"></div>
@@ -24,25 +37,399 @@
             </div>
         </div>
     </nav>
+    
     <div class="mobile-menu-overlay" id="mobile-menu">
-        <a href="about.html" class="mobile-link">About</a>
-        <a href="project.html" class="mobile-link">Projects</a>
-        <a href="experience.html" class="mobile-link">Experience</a>
-        <a href="contact.html" class="mobile-link">Contact</a>
+        <a href="#home" class="mobile-link" onclick="closeMenu()">Home</a>
+        <a href="#experience" class="mobile-link" onclick="closeMenu()">Experience</a>
+        <a href="#projects" class="mobile-link" onclick="closeMenu()">Projects</a>
+        <a href="#about" class="mobile-link" onclick="closeMenu()">About</a>
+        <a href="#contact" class="mobile-link" onclick="closeMenu()">Contact</a>
     </div>
 
-    <section class="hero">
+    <section class="hero" id="home">
         <div class="container">
             <h1>Java Developer.<br>Full Stack Engineer.</h1>
             <p>Creating scalable web applications with Spring Boot, React, and a passion for perfection.</p>
             <div class="btn-group">
-                <a href="project.html" class="btn btn-primary">View My Work</a>
-                <a href="contact.html" class="btn btn-primary">Contact Me</a>
+                <a href="#projects" class="btn btn-primary">View My Work</a>
+                <a href="#contact" class="btn btn-primary">Contact Me</a>
                 <a href="./Project/Resume.pdf" target="_blank" class="btn btn-outline">View Resume</a>
             </div>
         </div>
     </section>
 
+    <section class="section" id="experience">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Timeline.</h2>
+                <p class="section-subtitle">My professional journey so far.</p>
+            </div>
+            
+            <div class="timeline-container">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="exp-role">Software Developer</div>
+                    <div class="exp-company">ACUVATE Software Pvt. Ltd.</div>
+                    
+                    <div class="exp-date">
+                        Aug 2024 – Present <span id="duration" style="opacity: 0.7; margin-left: 8px; font-weight: 400;"></span>
+                    </div>
+                    
+                    <p class="exp-detail">
+                        Spearheaded the development of <strong>ANNA</strong>, an AI-powered travel assistant chatbot for <a href="https://www.hollandamerica.com/en/us" target="_blank" style="color: var(--accent);">Holland America Line</a>. Engineered a high-performance live-agent connector using <strong>.NET and C#</strong>, enabling seamless real-time communication handoffs between AI bots and human support agents.
+                    </p>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="exp-role">Web Developer Intern</div>
+                    <div class="exp-company">Bharat Intern</div>
+                    <div class="exp-date">Oct 2023 – Nov 2023</div>
+                    <p class="exp-detail">
+                        Architected a full-stack <strong>Cruise Management System</strong> using the <strong>MERN Stack</strong> (MongoDB, Express, React, Node.js). Implemented end-to-end features including dynamic trip listings, secure booking workflows, and admin dashboards, while optimizing the UI for responsive component performance.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="projects-section" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Selected Work.</h2>
+                <p class="section-subtitle">Research, Mobile Engineering, and AI Systems.</p>
+            </div>
+
+            <div class="projects-grid">
+                
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="https://images.unsplash.com/photo-1518640467707-6811f4a6ab73?auto=format&fit=crop&w=800&q=80" alt="Soundwave Geometry Analysis">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-title">Geometry of a Nightingale Song</div>
+                        <p class="project-desc">
+                            A research analysis studying nightingale vocalizations using geometric and topological data-analysis techniques. Transforms audio into point clouds and manifolds to visualize structure, motifs, and variability using dimensionality reduction.
+                        </p>
+                        <div class="tags-container">
+                            <span class="tech-pill">Python</span>
+                            <span class="tech-pill">Topological Data Analysis</span>
+                            <span class="tech-pill">Librosa</span>
+                            <span class="tech-pill">Research</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/dhiraj7kr/Geometry-of-a-Nightingale-Song" target="_blank" class="link-text">
+                                <i class="fab fa-github"></i> View Project
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="https://raw.githubusercontent.com/dhiraj7kr/digitalDhiraj/refs/heads/main/Project/DuperAIO.png" alt="Duper AIO Interface" onerror="this.src='https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=800&q=80'">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-title">Duper AIO</div>
+                        <p class="project-desc">
+                            A robust personal management ecosystem for productivity, finance, and security. Features gesture-driven UI interactions, secure encrypted storage for private notes, and a modular architecture built for performance.
+                        </p>
+                        <div class="tags-container">
+                            <span class="tech-pill">React Native</span>
+                            <span class="tech-pill">Expo</span>
+                            <span class="tech-pill">Node.js</span>
+                            <span class="tech-pill">MongoDB</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/dhiraj7kr/DuperAIO" target="_blank" class="link-text">
+                                <i class="fab fa-github"></i> View Project
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="https://raw.githubusercontent.com/dhiraj7kr/digitalDhiraj/refs/heads/main/Project/RedditSearch1.png" alt="Reddit Search Interface">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-title">Reddit Search Application</div>
+                        <p class="project-desc">
+                            A powerful, multi-modal discovery tool for the Reddit ecosystem. Provides a streamlined, dark-themed interface that categorizes results into text, high-resolution images, and curated video feeds using the Reddit API.
+                        </p>
+                        <div class="tags-container">
+                            <span class="tech-pill">React</span>
+                            <span class="tech-pill">Rest API</span>
+                            <span class="tech-pill">CSS Modules</span>
+                            <span class="tech-pill">Multi-modal</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/dhiraj7kr/Reddit-SearchBar" target="_blank" class="link-text">
+                                <i class="fab fa-github"></i> View Project
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=800&q=80" alt="AI Neural Network">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-title">M2: AI Memory System</div>
+                        <p class="project-desc">
+                            A centralized knowledge system powered by embeddings and FAISS. Enables semantic search across tasks, meetings, and PDFs. Includes AI-driven summarization, task generation, and multi-user support via Streamlit.
+                        </p>
+                        <div class="tags-container">
+                            <span class="tech-pill">Python</span>
+                            <span class="tech-pill">LangChain</span>
+                            <span class="tech-pill">FAISS</span>
+                            <span class="tech-pill">Streamlit</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/dhiraj7kr/My-Memory-M2" target="_blank" class="link-text">
+                                <i class="fab fa-github"></i> View Project
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Me.</h2>
+                <p class="section-subtitle">Engineering scalable solutions with precision and passion.</p>
+            </div>
+            
+            <div class="about-hero">
+                <div class="about-bio">
+                    <p>
+                        Hello! I am <span class="highlight">Dhiraj Kumar</span>, a Software Engineer based in Hyderabad, India. I graduated with a <span class="highlight">B.Tech in Computer Engineering</span> from Jain University, Bangalore (2024), where I built a strong foundation in algorithms and system design.
+                    </p>
+                    <p>
+                        Currently, I am driving innovation at <span class="highlight">ACUVATE Software</span>, focusing on AI-powered solutions and enterprise-grade applications. My expertise spans the full software lifecycle—from architecting robust backends using <strong>Spring Boot</strong> and <strong>Azure</strong> to crafting intuitive user interfaces with <strong>React</strong>.
+                    </p>
+                    <p>
+                        Beyond standard web development, I have a deep interest in data processing and computer vision. I actively work with <strong>Python (OpenCV, MediaPipe)</strong> for video analysis projects and utilize <strong>KQL (Kusto Query Language)</strong> for advanced data analytics on Azure. I am passionate about writing clean, maintainable code that solves real-world problems.
+                    </p>
+                </div>
+            </div>
+
+            <div class="skills-container">
+                <div class="skill-group">
+                    <h3>Core Languages</h3>
+                    <span class="skill-item"><i class="fab fa-java"></i> Java 17+</span>
+                    <span class="skill-item"><i class="fab fa-python"></i> Python & OpenCV</span>
+                    <span class="skill-item"><i class="fab fa-js"></i> JavaScript (ES6+)</span>
+                    <span class="skill-item"><i class="fas fa-code"></i> C++ / C#</span>
+                </div>
+                <div class="skill-group">
+                    <h3>Backend & Cloud</h3>
+                    <span class="skill-item"><i class="fas fa-leaf"></i> Spring Boot</span>
+                    <span class="skill-item"><i class="fab fa-microsoft"></i> Azure & KQL</span>
+                    <span class="skill-item"><i class="fas fa-database"></i> SQL & MongoDB</span>
+                    <span class="skill-item"><i class="fas fa-server"></i> RESTful APIs</span>
+                </div>
+                <div class="skill-group">
+                    <h3>Frontend & Tools</h3>
+                    <span class="skill-item"><i class="fab fa-react"></i> React.js</span>
+                    <span class="skill-item"><i class="fab fa-html5"></i> HTML5 & CSS3</span>
+                    <span class="skill-item"><i class="fas fa-camera"></i> MediaPipe</span>
+                    <span class="skill-item"><i class="fas fa-mobile"></i> React Native</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <div class="contact-grid">
+                
+                <div class="info-card">
+                    <h2>Get in Touch</h2>
+                    <p class="info-text">
+                        I am always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
+                    </p>
+
+                    <div class="contact-list">
+                        <div class="contact-item">
+                            <div class="icon-box"><i class="fas fa-map-marker-alt"></i></div>
+                            <div class="contact-details">
+                                <h3>Location</h3>
+                                <p>Hyderabad, Telangana, India</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="icon-box"><i class="fas fa-envelope"></i></div>
+                            <div class="contact-details">
+                                <h3>Email</h3>
+                                <a href="mailto:dhirajkr.tech@gmail.com">dhirajkr.tech@gmail.com</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="icon-box"><i class="fas fa-phone-alt"></i></div>
+                            <div class="contact-details">
+                                <h3>Phone</h3>
+                                <a href="tel:+919472826071">+91 9472 8260 71</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="map-container">
+                        <iframe 
+                            class="map-frame"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d243647.3160407062!2d78.26795895786377!3d17.412299800612457!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb99daeaebd2c7%3A0xae93b78392bafbc2!2sHyderabad%2C%20Telangana!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+
+                <div class="form-card">
+                    <form id="contact-form" action="https://formspree.io/f/xnjjveza" method="POST">
+                        <div class="form-group-row">
+                            <div class="form-group">
+                                <label class="form-label">Your Name</label>
+                                <input type="text" name="name" class="form-input" placeholder="Dhiraj Kumar" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Your Email</label>
+                                <input type="email" name="email" class="form-input" placeholder="dhiraj@example.com" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Subject</label>
+                            <input type="text" name="subject" class="form-input" placeholder="Project Inquiry" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Message</label>
+                            <textarea name="message" class="form-textarea" placeholder="Type your message here..." required></textarea>
+                        </div>
+
+                        <p id="form-status" style="margin-bottom: 15px; font-size: 0.9rem; min-height: 20px;"></p>
+
+                        <button type="submit" class="submit-btn">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
+
+                    <div class="form-divider">Or connect via</div>
+
+                    <div class="social-grid">
+                        <a href="https://linkedin.com/in/dhiraj7kr" target="_blank" class="social-card">
+                            <i class="fab fa-linkedin-in"></i>
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="https://github.com/dhiraj7kr" target="_blank" class="social-card">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub</span>
+                        </a>
+                        <a href="https://instagram.com/dhiraj7kr" target="_blank" class="social-card">
+                            <i class="fab fa-instagram"></i>
+                            <span>Instagram</span>
+                        </a>
+                        <a href="https://twitter.com/dhiraj7kr" target="_blank" class="social-card">
+                            <i class="fab fa-twitter"></i>
+                            <span>Twitter</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer><p>&copy; 2026 Dhiraj Kumar.</p></footer>
+    
     <script src="script.js"></script>
+    
+    <script>
+        function closeMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const hamburger = document.getElementById('hamburger-btn');
+            if(menu.classList.contains('active')) {
+                menu.classList.remove('active');
+                hamburger.classList.remove('active');
+            }
+        }
+    </script>
+
+    <script>
+        function updateExperience() {
+            const startDate = new Date('2024-08-01');
+            const currentDate = new Date();
+            
+            let years = currentDate.getFullYear() - startDate.getFullYear();
+            let months = currentDate.getMonth() - startDate.getMonth();
+
+            if (months < 0) { years--; months += 12; }
+            months += 1; 
+            if (months >= 12) { years++; months -= 12; }
+
+            let durationText = "(";
+            if (years > 0) durationText += years + (years === 1 ? " yr " : " yrs ");
+            if (months > 0) durationText += months + (months === 1 ? " mo" : " mos");
+            durationText += ")";
+
+            if (years === 0 && months === 0) durationText = "(Just started)";
+
+            document.getElementById("duration").textContent = durationText;
+        }
+        updateExperience();
+    </script>
+
+    <script>
+        const form = document.getElementById("contact-form");
+        
+        async function handleSubmit(event) {
+            event.preventDefault();
+            const status = document.getElementById("form-status");
+            const btn = form.querySelector('.submit-btn');
+            const originalBtnText = btn.innerHTML;
+
+            btn.innerHTML = "<i class='fas fa-spinner fa-spin'></i> Sending...";
+            btn.disabled = true;
+            status.innerHTML = "";
+
+            const data = new FormData(event.target);
+
+            fetch(event.target.action, {
+                method: form.method,
+                body: data,
+                headers: { 'Accept': 'application/json' }
+            }).then(response => {
+                if (response.ok) {
+                    status.innerHTML = "Message sent successfully!";
+                    status.style.color = "#4caf50";
+                    form.reset();
+                } else {
+                    response.json().then(data => {
+                        if (Object.hasOwn(data, 'errors')) {
+                            status.innerHTML = data["errors"].map(error => error["message"]).join(", ");
+                        } else {
+                            status.innerHTML = "Oops! There was a problem submitting your form";
+                        }
+                        status.style.color = "#f44336";
+                    })
+                }
+            }).catch(error => {
+                status.innerHTML = "Oops! There was a problem submitting your form";
+                status.style.color = "#f44336";
+            }).finally(() => {
+                btn.innerHTML = originalBtnText;
+                btn.disabled = false;
+            });
+        }
+        form.addEventListener("submit", handleSubmit);
+    </script>
 </body>
 </html>
