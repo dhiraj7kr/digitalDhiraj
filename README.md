@@ -52,7 +52,7 @@ A premium, high-performance personal portfolio website designed with a **modern 
 
 1. **Clone the repository:**
 ```bash
-git clone [https://github.com/dhiraj7kr/portfolio-website.git](https://github.com/dhiraj7kr/portfolio-website.git)
+git clone [https://github.com/dhiraj7kr/portfolio-website.git](https://github.com/dhiraj7kr/digitalDhiraj.git)
 cd portfolio-website
 
 ```
